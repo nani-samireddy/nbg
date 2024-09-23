@@ -38,7 +38,7 @@ export default function Page() {
                 </ul>
 
                 <h2>6. Limitation of Liability</h2>
-                <p>NearbyGod.com is provided "as is" and without warranties of any kind. We are not liable for any damages arising from the use of the website, including but not limited to inaccuracies in content, technical issues, or unauthorized access to your data.</p>
+                <p>NearbyGod.com is provided &quot;as is&quot; and without warranties of any kind. We are not liable for any damages arising from the use of the website, including but not limited to inaccuracies in content, technical issues, or unauthorized access to your data.</p>
 
                 <h2>7. Changes to These Terms</h2>
                 <p>We reserve the right to modify these Terms and Conditions at any time. Any changes will be posted on this page with an updated effective date.</p>

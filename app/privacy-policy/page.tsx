@@ -41,7 +41,7 @@ export default function Page() {
                 <h2>6. Request for Removal or Updates</h2>
                 <p>If you find incorrect information or wish to have a song removed from the website, you may request changes via the form at <a href="https://nearbygod.com/report">NearbyGod.com/report</a>. We will review your request and take appropriate action.</p>
 
-                <h2>7. Children's Privacy</h2>
+                <h2>7. Children&apos;s Privacy</h2>
                 <p>NearbyGod.com is not intended for children under the age of 13, and we do not knowingly collect personal information from children.</p>
 
                 <h2>8. Changes to This Policy</h2>

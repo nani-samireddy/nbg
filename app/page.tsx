@@ -1,6 +1,4 @@
-import Image from "next/image";
 import teluguSongs from './songs_data.json';
-import Footer from "@/components/custom/footer";
 
 export default function Page() {
 
