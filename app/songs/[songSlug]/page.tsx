@@ -8,11 +8,11 @@ type Song = {
   youtubeId?: string;
 };
 
-export type SongsDataType = {
+type SongsDataType = {
   [key: string]: Song;
 };
 
-export const songsData: SongsDataType = teluguSongs;
+const songsData: SongsDataType = teluguSongs;
 
 export default function Page({ params }: { params: { songSlug: string } }) {
   const song = songsData[params.songSlug];
