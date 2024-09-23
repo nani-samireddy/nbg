@@ -62,4 +62,18 @@
   h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
   }
+
+  .iframe-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+  }
+
+  .iframe-wrapper iframe {
+    
+    max-width: 100%;
+    width: 100%;
+  }
+
 }

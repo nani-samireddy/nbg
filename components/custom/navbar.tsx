@@ -2,7 +2,7 @@ import Image from "next/image";
 import logo2 from './logo.svg'
 export default function Navbar() {
     return (
-        <nav className="flex items-center justify-between px-[10%] py-10">
+        <nav className="flex items-center justify-between px-[4%] md:px-[10%] py-10">
             <a href="/">
                 <Image
                     aria-hidden

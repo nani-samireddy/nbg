@@ -20,17 +20,16 @@ export default function Page({ params }: { params: { songSlug: string } }) {
     return <div>Not found</div>;
   }
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[20px_1fr_20px] items-start justify-items-start md:justify-items-center min-h-screen p-8 pb-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-10 row-start-2 items-center sm:items-start">
         {
           song.youtubeId && (
-            <div className="audio-wrapper">
-              <iframe width="560" height="315" src={`https://www.youtube.com/embed/${song.youtubeId}?autoplay=0&controls=1&showinfo=0&autohide=1&mute=0`} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+            <div className="iframe-wrapper">
+              <iframe  src="https://www.youtube.com/embed/uYb15wAGo9A?si=-3R_LDVoZTkMan3k" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </div>
           )
         }
-
-
+        <div className="flex flex-col items-start justify-start gap-10">
         <div className="telugu">
           <h1 className="font-black text-4xl my-3">{song.telugu_title}</h1>
           <pre className=" leading-10">{song.telugu_lyrics}</pre>
@@ -38,6 +37,7 @@ export default function Page({ params }: { params: { songSlug: string } }) {
         <div className="english">
           <h1 className="font-black text-4xl my-3">{song.english_title}</h1>
           <pre className="leading-9">{song.english_lyrics}</pre>
+        </div>
         </div>
       </main>
     </div>
