@@ -18,14 +18,6 @@ export default function Navbar() {
                         href="/"
                         className="text-lg  hover:underline hover:underline-offset-4"
                     >
-                        Index
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="/songs"
-                        className="text-lg  hover:underline hover:underline-offset-4"
-                    >
                         Songs
                     </a>
                 </li>

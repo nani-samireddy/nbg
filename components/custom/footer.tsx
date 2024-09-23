@@ -11,6 +11,22 @@ export default function Footer() {
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="/report"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Report
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="/contribute"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Contribute Lyrics
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="/terms-and-conditions"
           target="_blank"
           rel="noopener noreferrer"

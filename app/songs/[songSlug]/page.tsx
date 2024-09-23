@@ -5,13 +5,14 @@ type Song = {
   english_title: string;
   telugu_lyrics: string;
   english_lyrics: string;
+  youtubeId?: string;
 };
 
-type SongsData = {
+export type SongsDataType = {
   [key: string]: Song;
 };
 
-const songsData: SongsData = teluguSongs;
+export const songsData: SongsDataType = teluguSongs;
 
 export default function Page({ params }: { params: { songSlug: string } }) {
   const song = songsData[params.songSlug];
@@ -20,9 +21,14 @@ export default function Page({ params }: { params: { songSlug: string } }) {
   }
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 font-[family-name:var(--font-geist-sans)]">
-        <div className="audio-wrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/uYb15wAGo9A?autoplay=0&controls=1&showinfo=0&autohide=1&mute=0" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
-        </div>
+      <main className="flex flex-col gap-10 row-start-2 items-center sm:items-start">
+        {
+          song.youtubeId && (
+            <div className="audio-wrapper">
+              <iframe width="560" height="315" src={`https://www.youtube.com/embed/${song.youtubeId}?autoplay=0&controls=1&showinfo=0&autohide=1&mute=0`} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+            </div>
+          )
+        }
 
 
         <div className="telugu">
@@ -33,7 +39,7 @@ export default function Page({ params }: { params: { songSlug: string } }) {
           <h1 className="font-black text-4xl my-3">{song.english_title}</h1>
           <pre className="leading-9">{song.english_lyrics}</pre>
         </div>
-
+      </main>
     </div>
   );
 }
