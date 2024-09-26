@@ -25,7 +25,13 @@ export default function Page({ params }: { params: { songSlug: string } }) {
         {
           song.youtubeId && (
             <div className="iframe-wrapper">
-              <iframe  src="https://www.youtube.com/embed/uYb15wAGo9A?si=-3R_LDVoZTkMan3k" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+              <iframe
+                src={`https://www.youtube.com/embed/${song.youtubeId}`}
+                title="YouTube video player" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen></iframe>
             </div>
           )
         }
