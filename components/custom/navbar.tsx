@@ -12,19 +12,19 @@ export default function Navbar() {
                     height={100}
                 /></a>
 
-            <ul className="flex items-center gap-6">
-                <li>
+            <ul className="flex items-center gap-1 mx-6">
+                <li className="hover:bg-slate-200 px-6 py-1 rounded-md transition-all duration-200">
                     <a
                         href="/"
-                        className="text-lg  hover:underline hover:underline-offset-4"
+                        className="text-lg "
                     >
                         Songs
                     </a>
                 </li>
-                <li>
+                <li className="hover:bg-slate-200 px-6 py-1 rounded-md transition-all duration-200">
                     <a
                         href="/about"
-                        className="text-lg  hover:underline hover:underline-offset-4"
+                        className="text-lg "
                     >
                         About
                     </a>

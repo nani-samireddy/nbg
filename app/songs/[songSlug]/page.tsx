@@ -37,11 +37,11 @@ export default function Page({ params }: { params: { songSlug: string } }) {
         }
         <div className="flex flex-col items-start justify-start gap-10">
         <div className="telugu">
-          <h1 className="font-black text-4xl my-3">{song.telugu_title}</h1>
+          <h1 className="font-black text-4xl my-6">{song.telugu_title}</h1>
           <pre className=" whitespace-pre-wrap leading-10">{song.telugu_lyrics}</pre>
         </div>
         <div className="english">
-          <h1 className="font-black text-4xl my-3">{song.english_title}</h1>
+          <h1 className="font-black text-4xl my-6">{song.english_title}</h1>
           <pre className="whitespace-pre-wrap leading-9">{song.english_lyrics}</pre>
         </div>
         </div>
