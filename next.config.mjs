@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: '/nbg',
-    output: 'export',
+    assetPrefix: "/nbg",
+  publicRuntimeConfig: {
+    basePath: "/nbg",
+  },
+  basePath: "/nbg",
+
 };
 
 export default nextConfig;
