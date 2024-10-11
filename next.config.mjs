@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: '/nbg'
+    basePath: '/nbg',
     output: 'export',
 };
 
