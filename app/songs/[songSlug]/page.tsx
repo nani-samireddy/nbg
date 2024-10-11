@@ -53,9 +53,7 @@ export default function Page({ params }: { params: { songSlug: string } }) {
 export async function generateStaticParams() {
 
   // Sort the songs by telugu title.
-  const sortedSongs = Object.entries(songsData).sort((a, b) => {
-    return a[1].telugu_title.localeCompare(b[1].telugu_title);
-  });
+  const sortedSongs = getSortedSongs();
 
   const paths = Object.keys(sortedSongs).map((songSlug) => ({
     songSlug,
@@ -63,3 +61,10 @@ export async function generateStaticParams() {
 
   return paths;
 }
+
+const getSortedSongs = () => {
+  return Object.entries(songsData).sort((a, b) => {
+    return a[1].telugu_title.localeCompare(b[1].telugu_title);
+  });
+};
+
