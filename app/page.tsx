@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import teluguSongs from './songs_data.json';
 
 type Song = {
@@ -21,13 +22,13 @@ const indexes = Object.keys(songsData);
       <main className="flex flex-col gap-8 row-start-2 items-start sm:items-start">
         {
           indexes.map((index) => (
-            <a
+            <Link
               key={index}
               href={`/songs/${index}`}
               className="flex items-center gap-2 text-lg text-blue-600 hover:underline hover:underline-offset-4"
             >
               {songsData[index].telugu_title}
-            </a>
+            </Link>
           ))
         }
       </main>
