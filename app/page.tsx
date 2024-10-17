@@ -14,9 +14,16 @@ type SongsData = {
 
 const songsData: SongsData = teluguSongs;
 
+const getSortedSongs = () => {
+  return Object.entries(songsData).sort((a, b) => {
+    return a[1].telugu_title.localeCompare(b[1].telugu_title);
+  });
+};
+
 export default function Page() {
 
-const indexes = Object.keys(songsData);
+const indexes = getSortedSongs().map(([index]) => index);
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-start sm:items-start">
