@@ -23,7 +23,7 @@ export const metadata: NBGMetadata = {
   title: "Near By GOD",
   description: "Near by god is a platform that provides a a huge list telugu christian songs, lyrics, and chords.",
   keywords: ["telugu christian songs", "telugu christian lyrics", "telugu christian chords"],
-  "google-site-verification": "e7h2QqNDsME-0v7EHu18lEt11kJWVEmfNAhEFzKKTCg",
+  "google-site-verification": "A7ZYQdelShfthIXnrZ9wH-ywLVWiyrdgmLQCO-Y8QPs",
 
 };
 
