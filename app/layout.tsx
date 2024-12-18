@@ -15,16 +15,10 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-interface NBGMetadata extends Metadata {
-  "google-site-verification": string;
-}
-
-export const metadata: NBGMetadata = {
+export const metadata: Metadata = {
   title: "Near By GOD",
   description: "Near by god is a platform that provides a a huge list telugu christian songs, lyrics, and chords.",
   keywords: ["telugu christian songs", "telugu christian lyrics", "telugu christian chords"],
-  "google-site-verification": "A7ZYQdelShfthIXnrZ9wH-ywLVWiyrdgmLQCO-Y8QPs",
-
 };
 
 export default function RootLayout({
@@ -34,6 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="google-site-verification" content="A7ZYQdelShfthIXnrZ9wH-ywLVWiyrdgmLQCO-Y8QPs" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
