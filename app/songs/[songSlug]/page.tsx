@@ -57,3 +57,32 @@ export async function generateStaticParams() {
 
   return paths;
 }
+
+export async function generateMetadata({ params }: { params: { songSlug: string } }) {
+  const song = songsData[params.songSlug];
+  if (!song) {
+    return {
+      title: "Song Not Found - Near By GOD",
+      description: "The requested song was not found. Browse through our collection of Telugu Christian songs.",
+    };
+  }
+
+  return {
+    title: `${song.telugu_title} - Near By GOD`,
+    description: `Lyrics for ${song.telugu_title} (${song.english_title}). Browse more Telugu Christian songs on Near By GOD.`,
+    keywords: [song.telugu_title, song.english_title, "Telugu Christian songs", "Telugu lyrics", "Near By GOD"],
+    openGraph: {
+      title: `${song.telugu_title} - Near By GOD`,
+      description: `Read the lyrics for ${song.telugu_title} in Telugu and English. Watch the video and enjoy!`,
+      url: `https://nani-samireddy.github.io/nbg/songs/${params.songSlug}`,
+      images: [
+        {
+          url: `https://img.youtube.com/vi/${song.youtubeId}/hqdefault.jpg`,
+          width: 1200,
+          height: 630,
+          alt: `${song.telugu_title} - Song Thumbnail`,
+        },
+      ],
+    },
+  };
+}

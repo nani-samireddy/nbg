@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { usePathname } from "next/navigation";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/custom/navbar";
@@ -16,9 +17,25 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Near By GOD",
-  description: "Near by god is a platform that provides a a huge list telugu christian songs, lyrics, and chords.",
-  keywords: ["telugu christian songs", "telugu christian lyrics", "telugu christian chords"],
+  title: "Near By GOD - Telugu Christian Songs, Lyrics & Chords",
+  description: "Discover a wide collection of Telugu Christian songs, lyrics, and chords. Browse, learn, and sing with Near By GOD.",
+  keywords: ["Telugu Christian songs", "Telugu Christian lyrics", "Telugu Christian chords", "Christian worship songs"],
+  openGraph: {
+    title: "Near By GOD - Telugu Christian Songs",
+    description: "Explore Telugu Christian songs, lyrics, and chords. Perfect for worship and singing along.",
+    url: "https://nani-samireddy.github.io/nbg/",
+    siteName: "Near By GOD",
+    images: [
+      {
+        url: "/nbg/static/images/og-image.png", // Add a relevant image in your static folder
+        width: 1200,
+        height: 630,
+        alt: "Near By GOD - Telugu Christian Songs",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
